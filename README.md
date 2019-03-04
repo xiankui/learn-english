@@ -6,7 +6,7 @@ For startup, basic words should be kept in mind, that is the beginning of everyt
 
 To extend your vocabulary, word root, prefix and suffix is priority.
 
-So, the project should include `vocabulary-basic.json`, `vocabulary-root.json` and `vocabulary-prefix-suffix.json`. that maybe a long time to collect.
+So, the project should include `vocabulary-basic.json`, `vocabulary-root.json`, `vocabulary-prefix.son` and `vocabulary-suffix.json`. that maybe a long time to collect. but i think it worth to do.
 
 But for now, `vocabulary.json` is mainly collected words from Teacher YangLiang, who is an excellent best teacher i have ever seen.
 

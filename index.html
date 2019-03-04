@@ -16,26 +16,38 @@
       background-color: #f8f8f8;
       color: #333;
     }
-    .picture {
+    .picture, .audio {
       width: 100%;
       max-width: 768px;
       margin: 0 auto;
-      overflow: hidden;
       position: relative;
+    }
+    @media screen and (max-width: 768px) {
+      .picture {
+        overflow: hidden;
+      }
     }
     .picture img {
       width: 100%;
     }
     .picture .icon {
       width: 80px;
+      height: 160px;
+      background-repeat: no-repeat;
+      -webkit-background-size: 100% auto;
+      background-size: 100% auto;
+      background-position: 50% 50%;
       position: absolute;
       top: 20%;
+      text-indent: -9999px;
       cursor: pointer;
     }
     .picture .icon-left {
+      background-image: url(./public/icons/arrow-left-o.png);
       left: -20%;
     }
     .picture .icon-right {
+      background-image: url(./public/icons/arrow-right-o.png);
       right: -20%;
     }
     
@@ -48,37 +60,15 @@
 </head>
 <body>
   <h1 class="touch-hidden">Learn English from scratch</h1>
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
-    <symbol viewBox="0 0 16 16" id="icon-arrow-left">
-        <desc>arrow-left</desc>
-        <path class="cls-1" d="M11.7 15.7a1 1 0 0 0 0-1.4L6.4 8l5.32-6.25a1 1 0 0 0 0-1.42.94.94 0 0 0-1.36 0l-6 7a1 1 0 0 0 0 1.42l6 7a.94.94 0 0 0 1.33-.04z"/>
-    </symbol>
-    <symbol viewBox="0 0 16 16" id="icon-arrow-right">
-        <desc>arrow-right</desc>
-        <path class="cls-1" d="M4.3 15.7a1 1 0 0 1 0-1.4L9.6 8 4.3 1.75a1 1 0 0 1 0-1.42.94.94 0 0 1 1.36 0l6 7a1 1 0 0 1 0 1.42l-6 7a.94.94 0 0 1-1.33-.04z"/>
-    </symbol>
-    <symbol viewBox="0 0 24 24" id="icon-close">
-        <desc>close</desc>
-        <path d="M19.3 5.4L5.4 19.3c-.2.2-.6.3-.8.1-.2-.2-.2-.5.1-.8L18.6 4.7c.2-.2.6-.3.8-.1.2.2.1.6-.1.8"/>
-        <path d="M18.6 19.3L4.7 5.4c-.2-.2-.3-.6-.1-.8s.5-.2.8.1l13.9 13.9c.2.2.3.6.1.8-.2.2-.6.1-.8-.1"/>
-    </symbol>
-    <symbol viewBox="0 0 24 24" id="icon-menu">
-        <desc>menu</desc>
-        <path class="st0" d="M20.4 13H3.6c-.3 0-.6-.2-.6-.5s.3-.5.6-.5h16.8c.3 0 .6.2.6.5s-.3.5-.6.5m0 6H3.6c-.3 0-.6-.2-.6-.5s.3-.5.6-.5h16.8c.3 0 .6.2.6.5s-.3.5-.6.5m0-12H3.6c-.3 0-.6-.2-.6-.5s.3-.5.6-.5h16.8c.3 0 .6.2.6.5s-.3.5-.6.5"/>
-    </symbol>
-    <symbol viewBox="0 0 16 16" id="icon-search">
-        <desc>search</desc>
-        <path d="M15.9 15.1l-3.6-3.6C13.4 10.4 14 8.8 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.8 0 3.4-.6 4.6-1.7l3.6 3.6c.2.2.5.2.7 0 .1-.2.1-.6 0-.8zM7 13c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
-    </symbol>
-  </svg>
+  <div  id="audio" class="audio">
+    <audio controls="" autoplay="true" name="media">
+      <source src="https://dict.youdao.com/dictvoice?audio=twilight" type="audio/mpeg">
+    </audio>
+  </div>
   <div id="picture-wrap" class="picture">
     <img id="image" src="./public/images-yang/twilight.png" alt="twilight">
-    <svg id="swipe-left" class="icon icon-left">
-      <use xlink:href="#icon-arrow-left"></use>
-    </svg>
-    <svg id="swipe-right" class="icon icon-right">
-      <use xlink:href="#icon-arrow-right"></use>
-    </svg>
+    <span id="swipe-left" class="icon icon-left">To Left</span>
+    <span id="swipe-right" class="icon icon-right">To Right</span>
   </div>
   <script>
     /**
@@ -88,17 +78,26 @@
     const app = {
       index: 0, // index of vocabulary
       vocabulary: [],
-      imgNode: document.querySelector('#image')
+      imgNode: document.querySelector('#image'),
+      audioNode: document.querySelector('#audio')
     };
 
     const getImgSrcByKeyword = function (key) {
       return './public/images-yang/' + key + '.png';
     }
 
+    const getVoiceByKeyword = function (key) {
+      return 'https://dict.youdao.com/dictvoice?audio=' + key;
+    }
+
     const setImgSrc = function (key) {
       const src = getImgSrcByKeyword(key);
       app.imgNode.setAttribute('src', src);
       app.imgNode.setAttribute('alt', key);
+
+      const voiceSrc = getVoiceByKeyword(key);
+      app.audioNode.innerHTML = 
+        '<audio controls="" autoplay="" name="media"><source id="youdao-voice" src="' + voiceSrc + '" type="audio/mpeg"></audio>';
     }
 
     const swipeImg = function(dir) {

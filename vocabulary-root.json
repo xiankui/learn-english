@@ -2,8 +2,128 @@
   "Psych": {
     "origin": "Greek",
     "means": "mind",
-    "creation": {
+    "examples": {
       "psychology": "the study of mind"
+    },
+    "illustrate": ""
+  },
+  "Phil": {
+    "origin": "Greek",
+    "means": "love",
+    "examples": {
+      "cinephile": "movie lover"
+    }
+  },
+  "Struc": {
+    "origin": "Latin",
+    "means": "build",
+    "examples": {
+      "structure": "parts or pieces built into something complex"
+    }
+  },
+  "Vac": {
+    "origin": "Latin",
+    "means": "empty",
+    "examples": {
+      "vacuous": "having an empty mind, not thinking"
+    }
+  },
+  "Ver": {
+    "origin": "Latin",
+    "means": "true",
+    "examples": {
+      "veritable": "real, true, authentic"
+    }
+  },
+  "Scrib/Scrip": {
+    "origin": "Latin",
+    "means": "write",
+    "examples": {
+      "prescription": "a written note signed by a doctor which provides instructions for medicine or treatment"
+    }
+  },
+  "Mega": {
+    "origin": "Greek",
+    "means": "great, large",
+    "examples": {
+      "megaphone": "a large device which makes your voice louder"
+    }
+  },
+  "Mono": {
+    "origin": "Greek",
+    "means": "single",
+    "examples": {
+      "monochromatic": "having only one color"
+    }
+  },
+  "Luc": {
+    "origin": "Latin",
+    "means": "light",
+    "examples": {
+      "lucid": "bright, clear"
+    }
+  },
+  "Mal": {
+    "origin": "Latin",
+    "means": "bad",
+    "examples": {
+      "malevolent": "wanting to do bad or evil things"
+    }
+  },
+  "Mar": {
+    "origin": "Latin",
+    "means": "sea",
+    "examples": {
+      "marina": "a port or harbor for boats and ships"
+    }
+  },
+  "Manu/Mani": {
+    "origin": "Latin",
+    "means": "hand",
+    "examples": {
+      "manicure": "a treatment to make your hands look clean, neat and polished"
+    }
+  },
+  "Min": {
+    "origin": "Latin",
+    "means": "small",
+    "examples": {
+      "miniscule": "very small in size"
+    }
+  },
+  "Fort": {
+    "origin": "Latin",
+    "means": "strong",
+    "examples": {
+      "fortitude": "strength"
+    }
+  },
+  "Mort": {
+    "origin": "Latin",
+    "means": "death",
+    "examples": {
+      "mortician": "someone who prepares dead bodies to be buried"
+    }
+  },
+  "Nas/Nat": {
+    "origin": "Latin",
+    "means": "birth",
+    "examples": {
+      "nascent": "coming into existence, something just recently created"
+    }
+  },
+  "Trans": {
+    "origin": "Latin",
+    "means": "across",
+    "examples": {
+      "transatlantic": "something which crosses the Atlantic Ocean"
+    }
+  },
+  "Voc/Vos": {
+    "origin": "Latin",
+    "means": "voice",
+    "examples": {
+      "vociferous": "loud, someone who speaks loudly or talks a lot"
     }
   }
 }
