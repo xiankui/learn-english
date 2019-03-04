@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <title>Learn English - collect resource by hand, from vocabulary to sentence and paragraph, approach to fluency day by day.</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.28;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+    .picture {
+      width: 100%;
+      max-width: 768px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .picture img {
+      width: 100%;
+    }
+    .picture .icon {
+      width: 80px;
+      position: absolute;
+      top: 20%;
+      cursor: pointer;
+    }
+    .picture .icon-left {
+      left: -20%;
+    }
+    .picture .icon-right {
+      right: -20%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Learn English from scratch</h1>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+    <symbol viewBox="0 0 16 16" id="icon-arrow-left">
+        <desc>arrow-left</desc>
+        <path class="cls-1" d="M11.7 15.7a1 1 0 0 0 0-1.4L6.4 8l5.32-6.25a1 1 0 0 0 0-1.42.94.94 0 0 0-1.36 0l-6 7a1 1 0 0 0 0 1.42l6 7a.94.94 0 0 0 1.33-.04z"/>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="icon-arrow-right">
+        <desc>arrow-right</desc>
+        <path class="cls-1" d="M4.3 15.7a1 1 0 0 1 0-1.4L9.6 8 4.3 1.75a1 1 0 0 1 0-1.42.94.94 0 0 1 1.36 0l6 7a1 1 0 0 1 0 1.42l-6 7a.94.94 0 0 1-1.33-.04z"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="icon-close">
+        <desc>close</desc>
+        <path d="M19.3 5.4L5.4 19.3c-.2.2-.6.3-.8.1-.2-.2-.2-.5.1-.8L18.6 4.7c.2-.2.6-.3.8-.1.2.2.1.6-.1.8"/>
+        <path d="M18.6 19.3L4.7 5.4c-.2-.2-.3-.6-.1-.8s.5-.2.8.1l13.9 13.9c.2.2.3.6.1.8-.2.2-.6.1-.8-.1"/>
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="icon-menu">
+        <desc>menu</desc>
+        <path class="st0" d="M20.4 13H3.6c-.3 0-.6-.2-.6-.5s.3-.5.6-.5h16.8c.3 0 .6.2.6.5s-.3.5-.6.5m0 6H3.6c-.3 0-.6-.2-.6-.5s.3-.5.6-.5h16.8c.3 0 .6.2.6.5s-.3.5-.6.5m0-12H3.6c-.3 0-.6-.2-.6-.5s.3-.5.6-.5h16.8c.3 0 .6.2.6.5s-.3.5-.6.5"/>
+    </symbol>
+    <symbol viewBox="0 0 16 16" id="icon-search">
+        <desc>search</desc>
+        <path d="M15.9 15.1l-3.6-3.6C13.4 10.4 14 8.8 14 7c0-3.9-3.1-7-7-7S0 3.1 0 7s3.1 7 7 7c1.8 0 3.4-.6 4.6-1.7l3.6 3.6c.2.2.5.2.7 0 .1-.2.1-.6 0-.8zM7 13c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z"/>
+    </symbol>
+  </svg>
+  <div id="picture-wrap" class="picture">
+    <img id="image" src="./public/images-yang/twilight.png" alt="twilight">
+    <svg id="swipe-left" class="icon icon-left">
+      <use xlink:href="#icon-arrow-left"></use>
+    </svg>
+    <svg id="swipe-right" class="icon icon-right">
+      <use xlink:href="#icon-arrow-right"></use>
+    </svg>
+  </div>
+  <script>
+    /**
+     * Lessons by Teacher Yang
+     */
+
+    const app = {
+      index: 0, // index of vocabulary
+      vocabulary: [],
+      imgNode: document.querySelector('#image')
+    };
+
+    const getImgSrcByKeyword = function (key) {
+      return './public/images-yang/' + key + '.png';
+    }
+
+    const setImgSrc = function (key) {
+      const src = getImgSrcByKeyword(key);
+      app.imgNode.setAttribute('src', src);
+      app.imgNode.setAttribute('alt', key);
+    }
+
+    const swipeImg = function(dir) {
+      if (dir === 'right' || dir === 'up') {
+        let index = app.index + 1;
+        if (index === app.vocabulary.length) {
+          index = 0;
+        }
+        let key = app.vocabulary[index];
+
+        setImgSrc(key);
+        app.index = index;
+      }
+
+      if (dir === 'left' || dir === 'down') {
+        let index = app.index - 1;
+        if (index === -1) {
+          index = app.vocabulary.length - 1;
+        }
+        let key = app.vocabulary[index];
+
+        setImgSrc(key);
+        app.index = index;
+      }
+    }
+
+    // fetch all data of Yang
+    fetch('./vocabulary.json')
+      .then(function(res) { return res.json(); })
+      .then(function(json) {
+        app.vocabulary = Object.keys(json);
+        // app.imgNode.setAttribute('src', getImgSrcByKeyword(app.vocabulary[0]));
+      });
+
+    // touchmove
+    let touchstartX = 0;
+    let touchstartY = 0;
+    let touchendX = 0;
+    let touchendY = 0;
+
+    const gestureZone = document.getElementById('picture-wrap');
+
+    gestureZone.addEventListener('touchstart', function(event) {
+        touchstartX = event.touches[0].screenX;
+        touchstartY = event.touches[0].screenY;
+        // console.log(`touchstart - ${touchstartX} - ${touchstartY}`)
+    }, false);
+
+    gestureZone.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        touchendY = event.changedTouches[0].screenY;
+        // console.log(`touchend - ${touchendX} - ${touchendY}`)
+        handleGesture();
+    }, false); 
+
+    function handleGesture() {
+        if (touchendX < touchstartX - 25) {
+            console.log('Swiped left');
+            return swipeImg('left');
+        }
+        
+        if (touchendX > touchstartX + 25) {
+            console.log('Swiped right');
+            return swipeImg('right');
+        }
+        
+        if (touchendY < touchstartY - 25) {
+            console.log('Swiped up');
+            return swipeImg('up');
+        }
+        
+        if (touchendY > touchstartY + 25) {
+            console.log('Swiped down');
+            return swipeImg('down');
+        }
+    }
+
+    // click swipe for desktop
+    document.getElementById('swipe-left').addEventListener('click', function() {
+      swipeImg('left');
+    });
+
+    document.getElementById('swipe-right').addEventListener('click', function() {
+      swipeImg('right');
+    });
+  </script>
+</body>
+</html>
