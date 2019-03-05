@@ -33,10 +33,11 @@
     }
     .words-scrollbar a {
       display: inline-block;
-      padding: 10px;
-      color: lightblue;
+      padding: 12px;
+      color: #83d0f2;
       text-decoration: none;
-      border-right: 1px solid lightblue;
+      border-right: 1px solid #83d0f2;
+      font-size: 18px;
     }
     @media screen and (min-width: 768px) {
       .words-scrollbar a {
@@ -49,6 +50,12 @@
       max-width: 768px;
       margin: 0 auto;
       position: relative;
+    }
+    .audio {
+      height: 54px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     @media screen and (max-width: 768px) {
       .picture {
@@ -92,7 +99,7 @@
     <!-- <a href="#thirve">thrive</a> -->
   </div>
   <div  id="audio" class="audio">
-    <!-- <audio controls="" autoplay="true" name="media">
+    <!-- <audio controls autoplay name="media">
       <source src="https://dict.youdao.com/dictvoice?audio=twilight" type="audio/mpeg">
     </audio> -->
   </div>
@@ -128,7 +135,7 @@
 
       const voiceSrc = getVoiceByKeyword(key);
       app.audioNode.innerHTML = 
-        '<audio controls="" autoplay="" name="media"><source id="youdao-voice" src="' + voiceSrc + '" type="audio/mpeg"></audio>';
+        '<audio controls autoplay name="media"><source src="' + voiceSrc + '" type="audio/mpeg">'+ key +'</audio>';
     }
 
     const swipeImg = function(dir) {
@@ -215,24 +222,24 @@
     }, false); 
 
     function handleGesture() {
-      if (touchendX < touchstartX - 25) {
+      if (touchendX < touchstartX - 50) {
         console.log('Swiped left');
-        return swipeImg('left');
-      }
-      
-      if (touchendX > touchstartX + 25) {
-        console.log('Swiped right');
         return swipeImg('right');
       }
       
-      if (touchendY < touchstartY - 25) {
-        console.log('Swiped up');
-        return swipeImg('up');
+      if (touchendX > touchstartX + 50) {
+        console.log('Swiped right');
+        return swipeImg('left');
       }
       
-      if (touchendY > touchstartY + 25) {
-        console.log('Swiped down');
+      if (touchendY < touchstartY - 50) {
+        console.log('Swiped up');
         return swipeImg('down');
+      }
+      
+      if (touchendY > touchstartY + 50) {
+        console.log('Swiped down');
+        return swipeImg('up');
       }
     }
 
