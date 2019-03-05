@@ -125,5 +125,89 @@
     "examples": {
       "vociferous": "loud, someone who speaks loudly or talks a lot"
     }
+  },
+  "Aqua": {
+    "origin": "Latin",
+    "means": "water",
+    "examples": {
+      "aquarium": "a tank of water where fish are kept as pets"
+    }
+  },
+  "Bene": {
+    "origin": "Latin",
+    "means": "good",
+    "examples": {
+      "benevolent": "wanting good things for people, generous, kind"
+    }
+  },
+  "Chron": {
+    "origin": "Greek",
+    "means": "time",
+    "examples": {
+      "chronological": "organized by time of occurrence"
+    }
+  },
+  "Bio": {
+    "origin": "Greek",
+    "means": "life",
+    "examples": {
+      "biology": "the study of living things"
+    }
+  },
+  "Theo": {
+    "origin": "Greek",
+    "means": "god",
+    "examples": {
+      "theology": "the study of religion"
+    }
+  },
+  "Phone": {
+    "origin": "Greek",
+    "means": "sound",
+    "examples": {
+      "telephone": "a device used to talk with other people"
+    }
+  },
+  "Omni": {
+    "origin": "Latin",
+    "means": "all",
+    "examples": {
+      "omniscient": "knowing everything"
+    }
+  },
+  "Sens/Sent": {
+    "origin": "Latin",
+    "means": "feel",
+    "examples": {
+      "sentimental": "emotional, attaching emotional value to things"
+    }
+  },
+  "Terr": {
+    "origin": "Latin",
+    "means": "earth",
+    "examples": {
+      "terrarium": "a container for land animals kept as pets, often containing rocks, dirt or sand"
+    }
+  },
+  "Vid/Vis": {
+    "origin": "Latin",
+    "means": "see",
+    "examples": {
+      "visible": "able to be seen"
+    }
+  },
+  "Auto": {
+    "origin": "Greek",
+    "means": "self",
+    "examples": {
+      "automatic": "happens on its own"
+    }
+  },
+  "Poly": {
+    "origin": "Greek",
+    "means": "many",
+    "examples": {
+      "polyglot": "person who can speak many languages"
+    }
   }
 }

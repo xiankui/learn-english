@@ -16,6 +16,34 @@
       background-color: #f8f8f8;
       color: #333;
     }
+    .words-scrollbar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; /* for ios Momentum scrolling */
+      scrollbar-width: none; /* for firefox */
+      scrollbar-color: transparent; /* for firefox */
+      background-color: black;
+    }
+    /* for chrome and safari */
+    .words-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .words-scrollbar a {
+      display: inline-block;
+      padding: 10px;
+      color: lightblue;
+      text-decoration: none;
+      border-right: 1px solid lightblue;
+    }
+    @media screen and (min-width: 768px) {
+      .words-scrollbar a {
+        padding: 20px;
+      }
+    }
+
     .picture, .audio {
       width: 100%;
       max-width: 768px;
@@ -60,13 +88,16 @@
 </head>
 <body>
   <h1 class="touch-hidden">Learn English from scratch</h1>
+  <div id="words-scrollbar" class="words-scrollbar">
+    <!-- <a href="#thirve">thrive</a> -->
+  </div>
   <div  id="audio" class="audio">
-    <audio controls="" autoplay="true" name="media">
+    <!-- <audio controls="" autoplay="true" name="media">
       <source src="https://dict.youdao.com/dictvoice?audio=twilight" type="audio/mpeg">
-    </audio>
+    </audio> -->
   </div>
   <div id="picture-wrap" class="picture">
-    <img id="image" src="./public/images-yang/twilight.png" alt="twilight">
+    <img id="image" src="" alt="">
     <span id="swipe-left" class="icon icon-left">To Left</span>
     <span id="swipe-right" class="icon icon-right">To Right</span>
   </div>
@@ -124,12 +155,42 @@
       }
     }
 
+    const renderWordsScrollbar = function(words) {
+      const $scrollbar = document.getElementById('words-scrollbar');
+      const elems = words.map(function(word) {
+        return `<a href="#${word}">${word}</a>`;
+      });
+      $scrollbar.innerHTML = elems.join('');
+    }
+
+    const setWordScrollIntoView = function (word) {
+      document.getElementById('words-scrollbar')
+        .querySelector(`a[href="#${word}"]`)
+        .scrollIntoView();
+    }
+
     // fetch all data of Yang
     fetch('./vocabulary.json')
       .then(function(res) { return res.json(); })
       .then(function(json) {
         app.vocabulary = Object.keys(json);
-        // app.imgNode.setAttribute('src', getImgSrcByKeyword(app.vocabulary[0]));
+
+        // set words scrollbar
+        renderWordsScrollbar(app.vocabulary);
+
+        // set current word base on hash or show the last one
+        const hash = location.hash.slice(1);
+        let curIndex = app.vocabulary.indexOf(hash);
+        if (curIndex === -1) {
+          curIndex = app.vocabulary.length - 1;
+        }
+
+        const word = app.vocabulary[curIndex];
+
+        setImgSrc(word);
+        app.index = curIndex;
+
+        setWordScrollIntoView(word);
       });
 
     // touchmove
@@ -182,6 +243,18 @@
 
     document.getElementById('swipe-right').addEventListener('click', function() {
       swipeImg('right');
+    });
+
+    // hash change
+    window.addEventListener('hashchange', function() {
+      const hash = location.hash.slice(1);
+      const index = app.vocabulary.indexOf(hash);
+      if (index !== -1) {
+        setImgSrc(hash);
+        app.index = index;
+
+        setWordScrollIntoView(hash);
+      }
     });
   </script>
 </body>

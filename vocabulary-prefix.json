@@ -2,8 +2,44 @@
   "ad": {
     "origin": "Latin",
     "means": "to, attached to",
-    "creation": {
+    "examples": {
       "adopt": "attached to an option"
     }
+  },
+  "amphi": {
+    "origin": "Greek",
+    "means": "both, about, around"
+  },
+  "andro": {
+    "origin": "Greek",
+    "means": "man, male"
+  },
+  "semi": {
+    "origin": "Latin",
+    "means": "half"
+  },
+  "non": {
+    "origin": "Latin",
+    "means": "not"
+  },
+  "pre": {
+    "origin": "Latin",
+    "means": "before"
+  },
+  "inter": {
+    "origin": "Latin",
+    "means": "between"
+  },
+  "anti": {
+    "origin": "Greek",
+    "means": "against, opposed"
+  },
+  "co": {
+    "origin": "Latin",
+    "means": "with, together"
+  },
+  "mono": {
+    "origin": "Greek",
+    "means": "one, single, alone"
   }
 }

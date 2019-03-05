@@ -2,8 +2,44 @@
   "able": {
     "origin": "Latin",
     "means": "is, can be",
-    "creation": {
+    "examples": {
       "readable": "can be read"
     }
+  },
+  "act": {
+    "origin": "Latin",
+    "means": "state, quality"
+  },
+  "phil/phile": {
+    "origin": "Greek",
+    "means": "fear, fearing"
+  },
+  "chrome": {
+    "origin": "Greek",
+    "means": "color"
+  },
+  "logy": {
+    "origin": "Greek",
+    "means": "study of"
+  },
+  "ism": {
+    "origin": "Greek",
+    "means": "act, practice or result of"
+  },
+  "some": {
+    "origin": "Greek",
+    "means": "body"
+  },
+  "cidal/cide": {
+    "origin": "Latin",
+    "means": "killer, a killing"
+  },
+  "meter": {
+    "origin": "Greek",
+    "means": "a measurement"
+  },
+  "nomy": {
+    "origin": "Greek",
+    "means": "systematized knowledge of"
   }
 }

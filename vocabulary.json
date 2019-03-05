@@ -131,5 +131,12 @@
   },
   "drawback": "n.缺点；弊端",
   "arrest": "vt.逮捕",
-  "persuade": "vt.说服，劝说"
+  "persuade": "vt.说服，劝说",
+  "stable": {
+    "zh-CN": "adj.稳定的；牢固的",
+    "root": {
+      "st": "stand"
+    },
+    "suffix": "able"
+  }
 }
