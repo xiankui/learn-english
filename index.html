@@ -177,7 +177,7 @@
     }
 
     // fetch all data of Yang
-    fetch('./vocabulary.json')
+    fetch('./vocabulary-yang.json')
       .then(function(res) { return res.json(); })
       .then(function(json) {
         app.vocabulary = Object.keys(json);
