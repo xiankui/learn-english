@@ -33,10 +33,15 @@ learn-english
   - vocabulary-suffix 后缀
 ```
 
-## Vocabulary-yang.json - Annotate English Word by Teacher YangLiang
+#### Vocabulary.json - Collins dictionary
+* Extremely Common - ***** 1000 words
+* Very Common - **** 4000 words
+* Used Occasionally - ** 30000 words
+
+#### Vocabulary-yang.json - Annotate English Word by Teacher YangLiang
 [weibo](https://www.weibo.com/yangliang1218)
 
 
-## Good Source
+#### Good Source
 * [word basic](http://www.manythings.org/vocabulary/lists/l/words.php?f=ogden)
 * [word root](https://www.fluentu.com/blog/english/english-word-roots/)

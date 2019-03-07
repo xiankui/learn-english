@@ -162,12 +162,16 @@
       }
     }
 
-    const renderWordsScrollbar = function(words) {
+    const renderWordsScrollbar = function(words, rawJsons) {
       const $scrollbar = document.getElementById('words-scrollbar');
       const elems = words.map(function(word) {
         return `<a href="#${word}">${word}</a>`;
       });
-      $scrollbar.innerHTML = elems.join('');
+      const raws = rawJsons.map(function(file) {
+        const name = file.indexOf('-') === -1 ? file : file.split('-')[1];
+        return `<a href="./${file}.json">${name}</a>`;
+      });
+      $scrollbar.innerHTML = elems.join('') + raws.join('');
     }
 
     const setWordScrollIntoView = function (word) {
@@ -182,8 +186,11 @@
       .then(function(json) {
         app.vocabulary = Object.keys(json);
 
+        // render raw json as link
+        const rawJsons = ['vocabulary', 'vocabulary-root', 'vocabulary-prefix', 'vocabulary-suffix'];
+
         // set words scrollbar
-        renderWordsScrollbar(app.vocabulary);
+        renderWordsScrollbar(app.vocabulary, rawJsons);
 
         // set current word base on hash or show the last one
         const hash = location.hash.slice(1);

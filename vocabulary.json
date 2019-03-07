@@ -1,6 +1,9 @@
 {
   "do": {
-    "means": "perform (an action, the precise nature of which is often unspecified)",
+    "trends": "*****",
+    "means": {
+      "verb": "perform (an action, the precise nature of which is often unspecified)"
+    },
     "examples": ["just do it", "What exactly is it that you do ?"]
   },
   "stick": {
@@ -13,9 +16,20 @@
       "He looks old and walks with a stick.",
       "Just a pointed building sticking out of the sand."
     ],
-    "related": {
+    "extend": {
       "sting": "a plant, animal, or insect put a stick-like into your body",
       "stimulate": "stick someone for the purpose of encourage him to do something."
     }
+  },
+  "brand": {
+    "trends": "****",
+    "means": {
+      "noun": "A brand of a product is the version of it that is made by one particular manufacturer.",
+      "verb": "If someone is branded as something bad, people think they are that thing."
+    },
+    "examples": [
+      "I bought one of the leading brands.",
+      "He was instantly branded as a rebel."
+    ]
   }
 }
