@@ -31,5 +31,19 @@
       "I bought one of the leading brands.",
       "He was instantly branded as a rebel."
     ]
+  },
+  "purchase": {
+    "trends": "****",
+    "means": {
+      "verb": "when you purchase something, you buy it.",
+      "noun": "a purchase is something that you buy."
+    },
+    "examples": [
+      "He purchased a ticket and went up on the top deck.",
+      "She opened the tie box and looked at her purchase. It was silk, with maroon stripes."
+    ],
+    "extend": {
+      "chase": "If you chase someone, or chase after them, you run after them or follow them quickly in order to catch or reach them."
+    }
   }
 }
