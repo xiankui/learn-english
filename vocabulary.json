@@ -32,6 +32,20 @@
       "He was instantly branded as a rebel."
     ]
   },
+  "close": {
+    "trends": "*****",
+    "means": {
+      "verb": "opposite to open or start. if you close something, you put it covered or finished.",
+      "noun": "The close of a period of time or an activity is the end of it. To bring or draw something to a close means to end it."
+    },
+    "examples": [
+      "Keep the curtains closed.",
+      "By the close of business, they knew the campaign was a success"
+    ],
+    "extend": {
+      "disclose": "If you disclose new or secret information, you tell people about it."
+    }
+  },
   "purchase": {
     "trends": "****",
     "means": {
@@ -44,6 +58,20 @@
     ],
     "extend": {
       "chase": "If you chase someone, or chase after them, you run after them or follow them quickly in order to catch or reach them."
+    }
+  },
+  "pose": {
+    "trends": "****",
+    "means": {
+      "verb": "You can say that people are posing when you think that they are behaving in an insincere or exaggerated way because they want to make a particular impression on other people.",
+      "noun": "A pose is a particular way that you stand, sit, or lie, for example when you are being photographed or painted."
+    },
+    "examples": [
+      "He criticized them for dressing outrageously and posing pretentiously.",
+      "In many writers modesty is a pose, but in Ford it seems to have been genuine."
+    ],
+    "extend": {
+      "expose": "An exposé is a film or piece of writing which reveals the truth about a situation or person, especially something involving shocking facts."
     }
   }
 }
