@@ -36,6 +36,7 @@ learn-english
 #### Vocabulary.json - Collins dictionary
 * Extremely Common - ***** 1000 words
 * Very Common - **** 4000 words
+* In Common Usage - *** 10000 words
 * Used Occasionally - ** 30000 words
 
 #### Vocabulary-yang.json - Annotate English Word by Teacher YangLiang

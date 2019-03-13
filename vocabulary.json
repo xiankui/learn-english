@@ -6,6 +6,55 @@
     },
     "examples": ["just do it", "What exactly is it that you do ?"]
   },
+  "date": {
+    "trends": "*****",
+    "means": {
+      "noun": "A date is a specific time that can be named, for example a particular day or a particular year."
+    },
+    "examples": ["What's the date today?"],
+    "extend": {
+      "update": "If you update something, you make it more modern, usually by adding new parts to it or giving new information."
+    }
+  },
+  "elect": {
+    "trends": "***",
+    "means": {
+      "verb": "When people elect someone, they choose that person to represent them, by voting for them."
+    },
+    "examples": [
+      "The people of the America have voted to elect a new president."
+    ],
+    "extend": {
+      "elite": "someone who is elected can be consider as elite.",
+      "select": "if you elect to something/somebody, sometimes means you want to select it."
+    }
+  },
+  "elite": {
+    "trends": "****",
+    "means": {
+      "noun": "You can refer to the most powerful, rich, or talented people within a particular group, place, or society as the elite."
+    },
+    "examples": ["We have a political elite in this country."]
+  },
+  "select": {
+    "trends": "****",
+    "means": {
+      "verb": "If you select something, you choose it from a number of things of the same kind."
+    },
+    "examples": [
+      "Voters are selecting candidates for both U.S. Senate seats and for 52 congressional seats."
+    ]
+  },
+  "pick": {
+    "trends": "****",
+    "means": {
+      "verb": "If you pick a particular person or thing, you choose that one."
+    },
+    "examples": ["I had deliberately picked a city with a tropical climate."],
+    "extend": {
+      "impeccable": "If you describe something such as someone's behaviour or appearance as impeccable, you are emphasizing that it is perfect and has no faults."
+    }
+  },
   "stick": {
     "trends": "****",
     "means": {
@@ -73,5 +122,26 @@
     "extend": {
       "expose": "An exposé is a film or piece of writing which reveals the truth about a situation or person, especially something involving shocking facts."
     }
+  },
+  "high": {
+    "trends": "*****",
+    "means": {
+      "adjective": "Something that is high extends a long way from the bottom to the top when it is upright. You do not use high to describe people, animals, or plants."
+    },
+    "examples": ["The gate was too high for them to climb."]
+  },
+  "light": {
+    "trends": "*****",
+    "means": {
+      "noun": "Light is the brightness that lets you see things. Light comes from sources such as the sun, moon, lamps, and fire."
+    },
+    "examples": ["It was difficult to see in the dim light."]
+  },
+  "highlight": {
+    "trends": "****",
+    "means": {
+      "verb": "If someone or something highlights a point or problem, they emphasize it or make you think about it."
+    },
+    "examples": ["Once again, the 'Free Press' prefers not to highlight these facts."]
   }
 }

@@ -41,5 +41,19 @@
   "mono": {
     "origin": "Greek",
     "means": "one, single, alone"
+  },
+  "e/ex/ec": {
+    "origin": "Latin",
+    "means": "out of, from",
+    "examples": {
+      "exit": "source of ex",
+      "exceed": "go out",
+      "extend": "stretch out",
+      "exclude": "shut out",
+      "eject": "throw out",
+      "emit": "send out",
+      "emigrate": "move out",
+      "eccentric": "out of center"
+    }
   }
 }
