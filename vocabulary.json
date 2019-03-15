@@ -36,6 +36,29 @@
     },
     "examples": ["We have a political elite in this country."]
   },
+  "just": {
+    "trends": "*****",
+    "means": {
+      "adverb": "Maybe you use just to emphasize a right time, a right person, a right place, or a right action. or you want to emphasize only part amount."
+    },
+    "examples": [
+      "I arrived here just a moment ago.",
+      "She is the just one that i want.",
+      "This is just a part of it."
+    ],
+    "extend": {
+      "adjust": "do something for attach to a right situation."
+    }
+  },
+  "material": {
+    "trends": "*****",
+    "means": {
+      "noun": "baby created by mother, everything created by necessary material."
+    },
+    "examples": [
+      "For building a house, you need many materials, such as stone, wood, sand."
+    ]
+  },
   "select": {
     "trends": "****",
     "means": {
