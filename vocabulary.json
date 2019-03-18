@@ -1,4 +1,11 @@
 {
+  "chain": {
+    "trends": "****",
+    "means": {
+      "noun": "A chain consists of metal rings connected together in a line",
+    },
+    "examples": ["Lock the door and put chains on?"]
+  },
   "do": {
     "trends": "*****",
     "means": {
@@ -93,6 +100,28 @@
       "stimulate": "stick someone for the purpose of encourage him to do something."
     }
   },
+  "stack": {
+    "trends": "***",
+    "means": {
+      "noun": "A stack of things is a pile of them.",
+      "verb": "If you stack a number of things, you arrange them in neat piles."
+    },
+    "examples": [
+      "There were stacks of books on the bedside table and floor.",
+      "They are stacked neatly in piles of three."
+    ]
+  },
+  "heap": {
+    "trends": "***",
+    "means": {
+      "noun": "A heap of things is a pile of them, especially a pile arranged in a rather untidy way.",
+      "verb": "If you heap things somewhere, you arrange them in a large pile."
+    },
+    "examples": [
+      "a heap of bricks",
+      "Mrs. Madrigal heaped more carrots onto Michael's plate."
+    ]
+  },
   "brand": {
     "trends": "****",
     "means": {
@@ -166,5 +195,40 @@
       "verb": "If someone or something highlights a point or problem, they emphasize it or make you think about it."
     },
     "examples": ["Once again, the 'Free Press' prefers not to highlight these facts."]
+  },
+  "serve": {
+    "trends": "****",
+    "means": {
+      "verb": "If you serve your country, an organization, or a person, you do useful work for them."
+    },
+    "examples": ["There must be someone else who could serve you that way"],
+    "extend": {
+      "server": "someone who can support serve. such as Internet Server.",
+      "servant": "A servant is someone who is employed to work at another person's home, for example as a cleaner or a gardener."
+    }
+  },
+  "observe": {
+    "trends": "****",
+    "means": {
+      "verb": "If you observe a person or thing, you watch them carefully, especially in order to learn something about them."
+    },
+    "examples": ["John still studies and observes the behaviour of babies."],
+    "extend": {
+      "observer": "You can refer to someone who sees or notices something as an observer."
+    }
+  },
+  "type": {
+    "trends": "*****",
+    "means": {
+      "noun": "A type of something is a group of those things that have particular features in common."
+    },
+    "examples": ["There are various types of the apple."]
+  },
+  "prototype": {
+    "trends": "***",
+    "means": {
+      "noun": "If you say that someone or something is a prototype of a type of person or thing, you mean that they are the first or most typical one of that type."
+    },
+    "examples": ["He was the prototype of the elder statesman."]
   }
 }
