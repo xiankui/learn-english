@@ -1,4 +1,22 @@
 {
+  "achieve": {
+    "trends": "****",
+    "means": {
+      "verb": "If you achieve a particular aim or effect, you succeed in doing it or causing it to happen, usually after a lot of effort."
+    },
+    "examples": ["We have achieved what we set out to do."]
+  },
+  "approach": {
+    "trends": "*****",
+    "means": {
+      "verb": "When you approach something, you get closer to it.",
+      "noun": "An approach to a place is a road, path, or other route that leads to it."
+    },
+    "examples": [
+      "When I approached, they grew silent.",
+      "The path serves as an approach to the boat house."
+    ]
+  },
   "chain": {
     "trends": "****",
     "means": {
@@ -22,6 +40,17 @@
     "extend": {
       "update": "If you update something, you make it more modern, usually by adding new parts to it or giving new information."
     }
+  },
+  "effect": {
+    "trends": "*****",
+    "means": {
+      "noun": "The effect of one thing on another is the change that the first thing causes in the second thing.",
+      "verb": "If you effect something that you are trying to achieve, you succeed in causing it to happen."
+    },
+    "examples": [
+      "Parents worry about the effect of music on their adolescent's behavior.",
+      "Not that they are taking real effect one way or another."
+    ]
   },
   "elect": {
     "trends": "***",
@@ -83,6 +112,34 @@
     "examples": ["I had deliberately picked a city with a tropical climate."],
     "extend": {
       "impeccable": "If you describe something such as someone's behaviour or appearance as impeccable, you are emphasizing that it is perfect and has no faults."
+    }
+  },
+  "road": {
+    "trends": "*****",
+    "means": {
+      "noun": "A road is a long piece of hard ground which is built between two places so that people can drive or ride easily from one place to the other."
+    },
+    "examples": ["There was very little traffic on the roads."]
+  },
+  "secure": {
+    "trends": "****",
+    "means": {
+      "verb": "If you secure a place, you make it safe from harm or attack.",
+      "adjective": "A secure place is tightly locked or well protected, so that people cannot enter it or leave it."
+    },
+    "examples": [
+      "The first priority must be to secure the future of our forests.",
+      "The moon warms emotions and helps both partners feel secure about the relationship."
+    ]
+  },
+  "security": {
+    "trends": "****",
+    "means": {
+      "noun": "Security refers to all the measures that are taken to protect a place, or to ensure that only people with permission enter it or leave it."
+    },
+    "examples": ["Strict security measures are in force in the capital."],
+    "extend": {
+      "securities": "stocks, shares, bonds, or other certificates that you buy in order to earn regular interest from them or to sell them later for a profit."
     }
   },
   "stick": {
@@ -194,7 +251,9 @@
     "means": {
       "verb": "If someone or something highlights a point or problem, they emphasize it or make you think about it."
     },
-    "examples": ["Once again, the 'Free Press' prefers not to highlight these facts."]
+    "examples": [
+      "Once again, the 'Free Press' prefers not to highlight these facts."
+    ]
   },
   "serve": {
     "trends": "****",
