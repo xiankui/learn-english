@@ -95,6 +95,13 @@
       "For building a house, you need many materials, such as stone, wood, sand."
     ]
   },
+  "meditation": {
+    "trends": "***",
+    "means": {
+      "noun": "Meditation is the act of remaining in a silent and calm state for a period of time, as part of a religious training, or so that you are more able to deal with the problems of everyday life."
+    },
+    "examples": ["Many busy executives have begun to practice yoga and meditation."]
+  },
   "select": {
     "trends": "****",
     "means": {
@@ -112,6 +119,19 @@
     "examples": ["I had deliberately picked a city with a tropical climate."],
     "extend": {
       "impeccable": "If you describe something such as someone's behaviour or appearance as impeccable, you are emphasizing that it is perfect and has no faults."
+    }
+  },
+  "resolve": {
+    "trends": "****",
+    "means": {
+      "verb": "To resolve a problem, argument, or difficulty means to find a solution to it. or, If you resolve to do something, you make a firm decision to do it."
+    },
+    "examples": [
+      "We must find a way to resolve these problems before it's too late.",
+      "If you know someone who’s depressed, please resolve never to ask them why."
+    ],
+    "extend": {
+      "solve": "If you solve a problem or a question, you find a solution or an answer to it."
     }
   },
   "road": {
