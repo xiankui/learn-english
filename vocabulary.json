@@ -6,6 +6,13 @@
     },
     "examples": ["We have achieved what we set out to do."]
   },
+  "adjacent": {
+    "trends": "****",
+    "means": {
+      "adjective": "If one thing is adjacent to another, the two things are next to each other."
+    },
+    "examples": ["The schools were adjacent but there were separate doors."]
+  },
   "approach": {
     "trends": "*****",
     "means": {
