@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recites</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    #content li {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="content"></div>
+  <script>
+    const recites = [
+      'on-depression.md',
+      'wait-and-hope.md',
+      'clash-of-the-titans-opening-scene.md',
+      'loves-philosophy.md',
+      'how-do-i-love-thee.md'
+    ];
+
+    const rawHtml = `
+      <ul>
+        ${recites.map(recite => (`<li><a href="./${recite}">${recite.split('\.')[0]}</a></li>`)).join('')}
+      </ul>
+    `;
+
+    document.getElementById('content').innerHTML = rawHtml;
+  </script>
+</body>
+</html>
