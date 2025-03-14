@@ -23,16 +23,16 @@
   <div id="content"></div>
   <script>
     const recites = [
-      'on-depression.md',
-      'wait-and-hope.md',
-      'clash-of-the-titans-opening-scene.md',
-      'loves-philosophy.md',
-      'how-do-i-love-thee.md'
+      'on-depression',
+      'wait-and-hope',
+      'clash-of-the-titans-opening-scene',
+      'loves-philosophy',
+      'how-do-i-love-thee'
     ];
 
     const rawHtml = `
       <ul>
-        ${recites.map(recite => (`<li><a href="./${recite}">${recite.split('\.')[0]}</a></li>`)).join('')}
+        ${recites.map(recite => (`<li><a href="./${recite}">${recite.split('-').join(' ')}</a></li>`)).join('')}
       </ul>
     `;
 
